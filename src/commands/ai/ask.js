@@ -3,6 +3,7 @@ const { OpenAI } = require('openai')
 
 const openai = new OpenAI({apiKey: process.env.OPENAI_KEY});
 
+//add character limit to questions 
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -16,10 +17,6 @@ module.exports = {
 		.setDMPermission(false),
 	async execute(interaction) {
 
-
-
-
-
         const question = interaction.options.getString('question') 
         console.log(question)
 
@@ -30,6 +27,6 @@ module.exports = {
         
           console.log(completion.choices[0]);
 
-		await interaction.reply(completion.choices[0]);
+		await interaction.reply(completion.choices[0].message.content);
 	},
 };
