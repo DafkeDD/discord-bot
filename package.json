@@ -1,0 +1,11 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cxgate/discord-bot.git",
+  "author": "Sam Shanks <shanks.sam@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  }
+}
